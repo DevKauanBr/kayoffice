@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAYOFFICE</title>
+
+    <style>
+        h1#titulo{
+            font: bold 45pt arial;
+        }
+
+        #titulo span{
+            color: #4a86e8;
+        }
+        
+        footer {
+            background-color: #333; /* Cor de fundo do rodapé */
+            color: white; /* Cor do texto no rodapé */
+            padding: 20px; /* Espaçamento interno do rodapé */
+            text-align: center; /* Alinhamento do texto */
+            position: fixed; /* Posição fixa na parte inferior da página */
+            left: 0; /* Alinha o rodapé à esquerda */
+            bottom: 0; /* Alinha o rodapé na parte inferior da página */
+            width: 100%; /* Largura total */
+            font: bold 8pt arial;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <p id="rod">KAYOFFICE - TODOS OS DIREITOS RESERVADOS. 
+            &copy; 2024</p>
+    </footer>
+
+    <h1 id="titulo"><center>KAY<span>OFFICE</span></center></h1>
+    <p id="p1"><center><strong>Uma empresa de tecnologia que visa promover o desenvolvimento, entretenimento e usabilidade da internet!</strong></center></p>
+    <p id="sobre"><br><br>SOBRE O SITE: <br>Site criado em 05/04/2024 com o intuito de popularizar a marca.<br>Fundador: <strong>Kauan Faria</strong> </p>
+    <p id="projetos"><br><br><strong>PROJETOS ATUAIS:</strong><br>THE APOCALIPSE:   O jogo THE APOCALIPSE será um jogo no estilo rpg, inspirado na jogabilidade do jogo The Legend Of Zelda A Link To The<br>Past. Inicialmente é garantido que o jogo saia para Computadores/Notebooks, mas nada confirmado para o mobile. O jogo ainda está em<br>processo de planejamento, e a data final prevista para o lançamento é até 31/12/2024. Para mais informações sobre o game, visite a aba Projetos.
+    </p>
+
+    <script>
+         var a = document.getElementById('rod')
+        var escolha = confirm('Deseja entrar como administrador?')
+        if (escolha == true){
+            var user = prompt('Usuário: ')
+            var password = prompt('Senha: ')
+            if(user == 'owner' && password == 'adminrato'){
+                a.innerHTML = `KAYOFFICE - TODOS OS DIREITOS RESERVADOS. 
+                &copy; 2024 - Logado como Owner`
+            }else if(user = 'adminjoao' && password == 'ratomorto'){
+                a.innerHTML = `KAYOFFICE - TODOS OS DIREITOS RESERVADOS. 
+                &copy; 2024 - Logado como administrador`
+            }else{
+                alert('Login Inválido!')
+            }
+        }
+        
+    </script>
+</body>
+</html>
