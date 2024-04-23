@@ -1,0 +1,34 @@
+h1#titulo{
+    font: bold 45pt arial;
+}
+
+#titulo span{
+    color: #4a86e8;
+}
+
+h1#dsg_titulo{
+    font: bold 20pt arial;
+    color: #2a6bd4;
+}
+
+p#oqedsg{
+    font: normal 10pt arial;
+}
+
+p#partici{
+    font: normal 10pt arial;
+}
+
+#partici span{
+    color: #00470a;
+}
+
+#btn_projetos{
+    width: 80px;
+    height: 40px;
+    cursor:pointer;
+}
+
+#txt_principais{
+    color: rgb(0, 0, 0);
+}

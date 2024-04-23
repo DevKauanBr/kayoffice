@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAYOFFICE</title>
+
+    <style>
+        #btn_inicio{
+            width: 80px;
+            height: 40px;
+            cursor:pointer;
+        }
+
+        h1#dsg_titulo{
+            font: bold 20pt arial;
+            color: #2a6bd4;
+        }
+
+        p#oqedsg{
+            font: normal 10pt arial;
+        }
+
+        #partici span{
+        color: #02680f;
+        }
+
+        p#partici{
+        font: normal 10pt arial;
+        }
+    </style>
+</head>
+<body>
+    <input id="btn_inicio" type="button" value="Início">
+    <br>
+    <br>
+    <br>
+
+    <img src="THE APOCALIPSE.png" alt="Cartaz de lançamento The APOCALIPSE game" width="300" height="300" >
+    <br>
+    <br>
+    <br>
+    <textarea id="caixa_ideias" placeholder="Envie ideias" rows="4" cols="50"></textarea>
+    <input  onclick="enviar_ideias()" type="button" value="Enviar">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 id="dsg_titulo">DSG - Serviço De Desing Gráfico</h1>
+    <p id="oqedsg">DSG é um programa criado pela <strong>KAYOFFICE CORPORATION</strong><br>com o intuito de oferecer trabalho voluntário<br>para pessoas que desejam contribuir para projetos da empresa<br>sem receber nenhum tipo de pagamento em dinheiro.</p>
+    <br> 
+    <p id="partici"><strong>PARTICIPANTES:</strong><br><br><span>Yuri Faria</span> - situação: Contribuinte</p>
+    
+
+    <script>
+        var btn_home = document.getElementById('btn_inicio')
+        btn_home.addEventListener('click', voltar_ao_inicio)
+
+
+        function voltar_ao_inicio(){
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
