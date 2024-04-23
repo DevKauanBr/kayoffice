@@ -5,87 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title">KAYOFFICE</title>
     <link rel="icon" href="favicon.ico">
-
-    <style>
-        h1#titulo{
-            font: bold 45pt arial;
-        }
-
-        #titulo span{
-            color: #4a86e8;
-        }
-
-        h1#dsg_titulo{
-            font: bold 20pt arial;
-            color: #2a6bd4;
-        }
-        
-        p#oqedsg{
-            font: normal 10pt arial;
-        }
-
-        p#partici{
-            font: normal 10pt arial;
-        }
-
-        #partici span{
-            color: #00470a;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     
     <h1 id="titulo"><center>KAY<span>OFFICE</span></center></h1>
-    <p id="p1"><center><strong>Uma empresa de tecnologia que visa promover o desenvolvimento, entretenimento e usabilidade da internet!</strong></center></p>
+    <div id="txt_principais">
+    <p id="p1"><center><strong>Uma empresa de tecnologia que visa promover o desenvolvimento, entretenimento e usabilidade da internet!</strong></center></p> 
     <p id="sobre"><br><br>SOBRE O SITE: <br>Site criado em 05/04/2024 com o intuito de popularizar a marca.<br>Fundador: <strong>Kauan Faria</strong> </p>
-    <p id="projetos"><br><br><strong>PROJETOS ATUAIS:</strong><br>THE APOCALIPSE:   O jogo THE APOCALIPSE será um jogo no estilo rpg, inspirado na jogabilidade do jogo The Legend Of Zelda A Link To The<br>Past. Inicialmente é garantido que o jogo saia para Computadores/Notebooks, mas nada confirmado para o mobile. O jogo ainda está em<br>processo de planejamento, e a data final prevista para o lançamento é até 31/12/2024. Para mais informações sobre o game, visite a aba Projetos.
-    </p>
-    <img src="THE APOCALIPSE.png" alt="Cartaz de lançamento The APOCALIPSE game" width="300" height="300" >
-    <br>
-    <br>
-    <br>
-    <textarea id="caixa_ideias" placeholder="Envie ideias" rows="4" cols="50"></textarea>
-    <input  onclick="enviar_ideias()" type="button" value="Enviar">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="dsg_titulo">DSG - Serviço De Desing Gráfico</h1>
-    <p id="oqedsg">DSG é um programa criado pela <strong>KAYOFFICE CORPORATION</strong><br>com o intuito de oferecer trabalho voluntário<br>para pessoas que desejam contribuir para projetos da empresa<br>sem receber nenhum tipo de pagamento em dinheiro.</p>
-    <br>
-    <p id="partici"><strong>PARTICIPANTES:</strong><br><br><span>Yuri Faria Moreira</span> - situação: Contribuinte</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <p id="projetos"><br><br><strong>PROJETOS ATUAIS:</strong><br>THE APOCALIPSE:   O jogo THE APOCALIPSE será um jogo no estilo rpg, inspirado na jogabilidade do jogo The Legend Of Zelda A Link To The<br>Past. Inicialmente é garantido que o jogo saia para Computadores/Notebooks, mas nada confirmado para o mobile. O jogo ainda está em<br>processo de planejamento, e a data final prevista para o lançamento é até 31/12/2024. Para mais informações sobre o game, visite a aba Projetos.</p>
+    </div>
+    <div id="páginas">
+        <input  id="btn_projetos"  type="button" value="Projetos">
+    </div>
+    
 
-    <script>
-        var a = document.getElementById('rod')
-        var titulo = document.getElementById('titulo')
-        titulo.addEventListener('click', easter1)
-        
-        function easter1(){
-            var texto = titulo.innerHTML
-            if (texto == '<center>KAY<span>OFFICE</span></center>'){
-                titulo.innerHTML = '<center>K<span>F</span></center>'
-            }else{
-                titulo.innerHTML = '<center>KAY<span>OFFICE</span></center>'
-            }
-        }
-
-        function enviar_ideias(){
-            var textoDigitado = document.getElementById("caixa_ideias").value;
-            var texto = textoDigitado
-            var emailDestinatario = "devkauanbr@gmail.com";
-            var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + emailDestinatario + "&su=Ideia%20Do%20Projeto The Apocalipse Game&body=" + encodeURIComponent(texto);
-            window.open(url, "_blank");
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
