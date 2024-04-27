@@ -2,12 +2,15 @@ var DATE = new Date()
 var hora = DATE.getHours()
 var textos_home = document.getElementById('txt_principais')
 var botão_projetos = document.getElementById('btn_projetos')
+var botão_sobre = document.getElementById('btn_sobre')
 var a = document.getElementById('rod')
 var titulo = document.getElementById('titulo')
 var contador_easter2 = 0
 titulo.addEventListener('click', easter1)
 titulo.addEventListener('contextmenu', easter2)
+var span = document.getElementById('span')
 botão_projetos.addEventListener('click', ir_paraProjetos)
+botão_sobre.addEventListener('click', ir_paraSobre)
 
 function easter1(){
     var texto = titulo.innerHTML
@@ -30,10 +33,18 @@ function ir_paraProjetos() {
     window.location.href = 'projetos.html';
 }
 
+function ir_paraSobre(){
+    window.location.href = 'sobre.html'
+}
+
 function easter2(){
-    if(contador_easter2 >= 15){
-        prompt('command: ')
+    if(contador_easter2 >= 5){
+        var cmd = prompt('command: ')
         contador_easter2 = 0
+
+        if (cmd == '**delete'){
+            document.write('deleted');
+        }
     }else{
         contador_easter2++
     }
