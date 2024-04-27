@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAYOFFICE</title>
+    <title>KAYOFFICE - Projetos</title>
 
     <style>
         #btn_inicio{
@@ -11,50 +11,60 @@
             height: 40px;
             cursor:pointer;
         }
-
-        h1#dsg_titulo{
-            font: bold 20pt arial;
-            color: #2a6bd4;
+        #title_game{
+        font: bold 25pt arial;
+        color: rgb(8, 117, 117);
         }
-
-        p#oqedsg{
+        #btn_mostrar{
+            width: 70px;
+            height: 30px;
+            color: rgb(45, 58, 47);
+            border: 0px;
+            background-color: white;
+            cursor: pointer;
+        }
+        #the_apocalipse{
             font: normal 10pt arial;
         }
-
-        #partici span{
-        color: #02680f;
+        #span_game{
+            color: rgb(8, 117, 117);
         }
-
-        p#partici{
-        font: normal 10pt arial;
+        #ideias{
+            width: 90px;
+            height: 30px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <input id="btn_inicio" type="button" value="Início">
-    <br>
-    <br>
-    <br>
+    <center><input id="btn_inicio" type="button" value="<-- Home"></center>
+    <h1 id="title_game">The Apocalipse (Game)</h1>
+    <input id="btn_mostrar" type="button" value="Ver..." onclick="mostrar_dev()">
 
-    <img src="THE APOCALIPSE.png" alt="Cartaz de lançamento The APOCALIPSE game" width="300" height="300" >
-    <br>
-    <br>
-    <br>
-    <textarea id="caixa_ideias" placeholder="Envie ideias" rows="4" cols="50"></textarea>
-    <input  onclick="enviar_ideias()" type="button" value="Enviar">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 id="dsg_titulo">DSG - Serviço De Desing Gráfico</h1>
-    <p id="oqedsg">DSG é um programa criado pela <strong>KAYOFFICE CORPORATION</strong><br>com o intuito de oferecer trabalho voluntário<br>para pessoas que desejam contribuir para projetos da empresa<br>sem receber nenhum tipo de pagamento em dinheiro.</p>
-    <br> 
-    <p id="partici"><strong>PARTICIPANTES:</strong><br><br><span>Yuri Faria</span> - situação: Contribuinte</p>
-    
+    <div id="the_apocalipse">
+        <h1>
+        Progresso: <span id="span_game">13%</span><br><br>
+        Etapa: <span id="span_game">Planejamento / Desenvolvimento</span><br><br>
+        Frequência: <span id="span_game">Boa</span><br><br>
+        Contribuintes:
+        </h1>
 
+        <p>
+            <br><strong>DESENVOLVEDOR:</strong> <span id="span_game">Kauan Faria</span>
+            <br><br><strong>ARTISTA:</strong><span id="span_game"> João Pedro Ferreira</span>
+        </p>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input id="ideias" type="button" value="Enviar Ideias" onclick="enviar_ideias()">
     <script>
+        var mostrando = false
+        var the_apocalipse = document.getElementById('the_apocalipse')
+        the_apocalipse.style.display = 'none'
+
         var btn_home = document.getElementById('btn_inicio')
         btn_home.addEventListener('click', voltar_ao_inicio)
 
@@ -62,6 +72,30 @@
         function voltar_ao_inicio(){
             window.location.href = 'index.html';
         }
+
+        function mostrar_dev(){
+            if(mostrando == false){
+                var txt = document.getElementById('btn_mostrar')
+                txt.value = '<'
+                txt.style.color = 'red'
+                txt.style.font = 'bold 15pt arial'
+                mostrando = true
+                the_apocalipse.style.display = 'block'
+            }else{
+                var txt = document.getElementById('btn_mostrar')
+                txt.value = 'Ver...'
+                txt.style.color = 'black'
+                txt.style.font = 'normal 10pt arial'
+                mostrando = false
+                the_apocalipse.style.display = 'none'
+            }
+            
+        }
+
+        function enviar_ideias() {
+            window.open('https://forms.gle/jP17pEaQU3vsHbKs9', '_blank');
+        }
+
     </script>
 </body>
 </html>
