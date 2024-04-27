@@ -23,12 +23,27 @@ p#partici{
     color: #00470a;
 }
 
-#btn_projetos{
+#btn_projetos, #btn_sobre{
     width: 80px;
     height: 40px;
     cursor:pointer;
 }
 
+
 #txt_principais{
     color: rgb(0, 0, 0);
+    font: normal 10pt arial;
+}
+
+#conteudo_home{
+    font: normal 10pt arial;
+    color: #1148a0;
+}
+#img1{
+    width: 300px;
+
+}
+#p_jogo{
+    font: normal 10pt arial;
+    color: black;
 }
