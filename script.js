@@ -69,3 +69,53 @@ if(hora >= 6 && hora < 18){
     textos_home.style.color = 'white'
 
 }
+
+
+
+// ID do seu Gist no GitHub
+const gistId = "b98d4df632b542fd197668735eb27573";
+
+// URL da API do GitHub para acessar o conteúdo de um Gist
+const gistApiUrl = `https://api.github.com/gists/${gistId}`;
+
+// Variável global para armazenar o conteúdo do Gist
+let data;
+
+// Função para buscar o conteúdo do Gist usando a API do GitHub
+async function fetchGistContent(url) {
+  try {
+    const response = await fetch(url);
+    const responseData = await response.json();
+    // Extrair o conteúdo do arquivo do Gist
+    const content = responseData.files[Object.keys(responseData.files)[0]].content;
+    return content;
+  } catch (error) {
+    console.error("Erro ao buscar o conteúdo do Gist:", error);
+    return null;
+  }
+}
+
+// Função para processar o conteúdo do Gist
+async function processGistContent() {
+  const gistContent = await fetchGistContent(gistApiUrl);
+  if (gistContent) {
+    // Armazenar o conteúdo na variável global
+    data = gistContent;
+    //alert(data);
+    // Faça o que for necessário com o conteúdo aqui
+  } else {
+    console.error("Não foi possível obter o conteúdo do Gist.");
+  }
+}
+
+// Chamar a função para processar o conteúdo do Gist
+processGistContent().then(() => {
+
+  // Usar a variável global data aqui, após a resolução da Promise
+  
+    var item1 = document.getElementById('aviso_serve')
+    item1.innerText = `${data}`
+});
+
+
+
