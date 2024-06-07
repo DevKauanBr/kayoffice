@@ -15,16 +15,18 @@ p#oqedsg{
     font: normal 10pt arial;
 }
 
-#avisos{
-    background-color: gray;
+#avisos {
+    background-color: #4CAF50; /* verde */
     width: 300px;
     height: 100px;
     color: white;
     border-radius: 20px;
     padding: 15px;
     text-align: center;
-    font: arial;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* uma fonte mais moderna */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* sombra suave */
 }
+
 
 #gist-container {
     display: none;
